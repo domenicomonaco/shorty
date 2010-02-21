@@ -227,7 +227,9 @@ function shorty_preprocess_node(&$vars){
   if($linkoption['variable']){
     $query = db_query("SELECT sid, hash FROM {shortyalias} WHERE nid = '%d'", $vars['nid']);
     $row = db_fetch_array($query);
-    $vars['shorty'] = '<b>' . t('Copy and share:') . '</b> <a href="' . $row['hash'] . '">' . $row['hash'] . '</a>';
+    if($row != 0){
+      $vars['shorty'] = '<span id="shorty"><b>' . t('Copy and share:') . '</b> <a href="' . $row['hash'] . '">' . $row['hash'] . '</a></span>';
+    }
   }
   return $vars;
 }
