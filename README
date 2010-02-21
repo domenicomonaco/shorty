@@ -1,3 +1,17 @@
 README.txt
 ==========
 
+DESCRIPTION
+======================
+Shorten Long URLs of your Drupal's node with Shorty
+The module allows you to insert in each node a "short url" relative of the node path.
+
+AUTHOR/MAINTAINER
+======================
+- Domenico Monaco
+info[at]kiuz[dot]it
+
+
+LICENSE
+======================
+- BSD License
