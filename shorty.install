@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implementation of hook_schema().
+ */
+function shorty_schema() {
+  $schema['shortyalias'] = array(
+    'fields' => array(
+      'sid' => array('description' => 'Id of link list.', 'type' => 'serial'),
+      'service' => array('type' => 'varchar', 'length' => '255', 'not null' => TRUE, 'default' => ''),
+      'hash' => array('type' => 'varchar', 'length' => '255', 'not null' => TRUE, 'default' => ''),
+      'nid' => array('description' => 'Node id to point link.','type' => 'int','not null' => TRUE, 'default' => 0),
+      'timech' => array('type' => 'int'),
+    ),
+    'primary key' => array('sid')
+  );
+  return $schema;
+}
+
+/**
+ * Implementation of hook_install().
+ */
+function shorty_install() {
+  drupal_install_schema('shorty');
+}
+
+/**
+ * Implementation of hook_unistall().
+ */
+function shorty_uninstall() {
+  drupal_uninstall_schema('shorty');
+}
