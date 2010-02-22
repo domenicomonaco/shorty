@@ -1,8 +1,8 @@
 <?php
 /**
- * Toly class
+ * Isgd class
  *
- * This source file can be used to communicate with To.ly (http://to.ly)
+ * This source file can be used to communicate with Is.gd (http://is.gd)
  *
  * The class is documented in the file itself. If you find any bugs help me out and report them. Reporting can be done by sending an email to info[at]kiuz[dot]it
  * If you report a bug, make sure you give me enough information (include your code).
@@ -24,10 +24,11 @@
  * @copyright		Copyright (c) 2010, Domenico Monaco. All rights reserved.
  * @license			BSD License
  */
-class Toly{
 
-	// url for the toly-api
-	const API_URL = 'http://to.ly/api.php';
+class IsGd{
+
+  // url for the isgd-api
+  const API_URL = 'http://is.gd/api.php';
 
 // class methods
 /**
@@ -49,8 +50,8 @@ class Toly{
   */
   public function shorten($url){
     $this->ch = curl_init();
-    curl_setopt($this->ch, CURLOPT_URL, "http://to.ly/api.php?longurl=".urlencode($url));
-    curl_setopt($this->ch, CURLOPT_RETURNTRANSFER,1);
+    curl_setopt($this->ch, CURLOPT_URL, "http://is.gd/api.php?longurl=" . urlencode($url));
+    curl_setopt($this->ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($this->ch, CURLOPT_HEADER, 0);
     $this->shorturl = curl_exec ($this->ch);
     curl_close ($this->ch);
