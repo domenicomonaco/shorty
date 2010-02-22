@@ -27,7 +27,7 @@ function _shorty_apiclass($var){
   );
 
   if($var == 'include') {
-    module_load_include('php', 'shorty', variable_get('shorty_apiservice',''));
+    module_load_include('php.inc', 'shorty', variable_get('shorty_apiservice',''));
   }
   
   if($var == 'list') {
