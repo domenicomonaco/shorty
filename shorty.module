@@ -21,9 +21,9 @@
 
 function _shorty_apiclass($var){
   $shorty_service = array(
-    'bitly' => t('Bit.ly'),
-    'toly' => t('To.ly'),
-    'isgd' => t('Is.gd')
+    'bitly' => t('Bit.ly - <a href="http://bit.ly">http://bit.ly</a> (' . l('Require authentication','admin/settings/shorty/bitly') . ')'),
+    'toly' => t('To.ly - <a href="http://to.ly">http://to.ly</a> (No require authentication)'),
+    'isgd' => t('Is.gd - <a href="http://is.gd">http://is.gd</a> (No require authentication)')
   );
 
   if($var == 'include') {
@@ -120,7 +120,7 @@ function shorty_admin(){
 
   $form['shorty_position'] = array(
     '#type' => 'checkboxes',
-    '#title' => t('Active shorty on nodes'),
+    '#title' => t('Shorty node\'s attachment'),
     '#options' => array('links' => t('Printed Aumatically in $links variaible'), 'variable' => t('Enabled custom variable in a node.tpl.php files named $shorty.')),
     '#default_value' => variable_get('shorty_position', 'links')
   );

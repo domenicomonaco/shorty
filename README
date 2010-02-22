@@ -11,8 +11,8 @@ The module allows you to insert in each node a "short url" relative of the node 
 EXTERNAL API SERVICE
 ======================
 - http://bit.ly
-- http://to.ly
-
+- http://to.ly (No require authentication)
+- http://is.gd (No require authentication)
 
 AUTHOR/MAINTAINER
 ======================
